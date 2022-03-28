@@ -90,7 +90,7 @@ const FormInputComponent = forwardRef<{ validate: () => boolean }, FomrInputComp
 
     return (
         <Fieldset invalid={invalid}>
-            <FormInput ref={formInputRef} placeholder={placeholder} required={required} defaultValue={value} onChange={handleInputChange} type="tel" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"/>
+            <FormInput ref={formInputRef} placeholder={placeholder} required={required} defaultValue={value} onChange={handleInputChange} />
             <InputLegend invalid={invalid}>{legend}{required && " *"}</InputLegend>
         </Fieldset>
     );
