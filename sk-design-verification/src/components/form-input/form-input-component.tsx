@@ -2,19 +2,19 @@ import { ChangeEvent, forwardRef, useImperativeHandle, useRef, useState } from '
 import styled from 'styled-components';
 
 const Fieldset = styled.fieldset<{ invalid: boolean }>`
+    position: relative;
     height: 38px;
     border-radius: 8px;
     border-width: 2px;
     border-style: solid;
     border-color: ${(p) => p.invalid ? "#EB5E55" : "#E3E3E3"};
-    position: relative;
 
     ${(p) => p.invalid ? `
     &:after {
-        content: 'Обязательное поле';
-        font-size: 12px;
-        margin-top: 18px;
         position: absolute;
+        content: 'Обязательное поле';
+        margin-top: 18px;
+        font-size: 12px;
         color: #EB5E55;
     }
     ` : `
@@ -28,10 +28,10 @@ const Fieldset = styled.fieldset<{ invalid: boolean }>`
 
 const FormInput = styled.input`
     width: 100%;
+    margin-top: 3px;
     border: 0;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-    margin-top: 3px;
 
     &:focus {
         outline: none;

@@ -6,11 +6,11 @@ const Dropdown = styled.div<{ invalid: boolean }>`
     position: relative;
     ${(p) => p.invalid ? `
     &:after {
-        content: 'Обязательное поле';
-        font-size: 12px;
+        position: absolute;
         margin-top: 0px;
         margin-left: 15px;
-        position: absolute;
+        content: 'Обязательное поле';
+        font-size: 12px;
         color: #EB5E55;
     }` : ''}
 `;
@@ -18,12 +18,13 @@ const Dropdown = styled.div<{ invalid: boolean }>`
 const DropdownButton = styled.button<{ invalid: boolean }>`
     position: relative;
     display: block;
+    padding-left: 15px;
     width: 100%;
+    height: 38px;
     text-align: left;
     background-color: #FFFFFF;
     color: ${(p) => p.invalid ? "#EB5E55" : "#353238"};
     cursor: pointer;
-    height: 38px;
     border-radius: 8px;
     border-width: 2px;
     border-style: solid;
@@ -33,7 +34,6 @@ const DropdownButton = styled.button<{ invalid: boolean }>`
     background-position-x: calc(100% - 15px);
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-    padding-left: 15px;
 
     ${(p) => p.invalid ? '' : `
     &:focus {
@@ -61,10 +61,10 @@ const DropdownList = styled.ul<{ visible: boolean }>`
 const DropdownListItem = styled.li`
     margin: 0;
     padding: 5px;
+    width: 171px;
     border: 2px solid #E3E3E3;
     border-bottom: 0px;
     cursor: pointer;
-    width: 171px;
     text-align: center;
     font-size: 15px;
 

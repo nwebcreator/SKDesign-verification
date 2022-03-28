@@ -2,29 +2,36 @@ import LogoSrc from '../../assets/img/logo.png';
 import styled from 'styled-components';
 
 const Description = styled.div`
-    width: calc(100% - 440px);
     padding-right: 60px;
+    @media (max-width: 768px) {
+        flex-wrap: wrap;
+        margin-left: 10px;
+        width: 360px;
+      }
 `;
 
 const Logo = styled.img`
-    margin-top: 15%;
+    margin-top: 40px;
     width: 475px;
     height: 70px;
 `;
 
 const VerificationTitle = styled.h1`
+    margin-top: 35px;
+    margin-bottom: 40px;
     font-family: 'Open Sans', sans-serif;
     font-size: 26px;
     color: #353238;
-    margin-top: 30px;
-    margin-bottom: 40px;
 `;
 
 const VerificationText = styled.p`
+    margin-top: 25px;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     color: #353238;
-    margin-top: 20px;
+    @media (max-width: 768px) {
+        margin-top: 7px;
+      }
 `;
 
 const DescriptionComponent = () => {

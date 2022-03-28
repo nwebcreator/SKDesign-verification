@@ -14,6 +14,10 @@ const Form = styled.form`
     border-radius: 8px;
     box-shadow: 0px 5px 20px rgba(53, 50, 56, 0.14);
     transition: 0.7s;
+    @media (max-width: 768px) {
+        height: 100%;
+        margin-top: 20px;
+      }
 `;
 
 const MainBlock = styled.div`
@@ -54,6 +58,10 @@ const FormSubmitButton = styled.button`
     &:hover:active {
         background: #00657E;
     }
+
+    @media (max-width: 768px) {
+        width: 380px;
+        }
 `;
 
 const FormComponent = () => {

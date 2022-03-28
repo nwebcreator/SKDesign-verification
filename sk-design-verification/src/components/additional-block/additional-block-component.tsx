@@ -4,6 +4,9 @@ import ArrowSrc from '../../assets/img/arrow.png';
 
 const AdditionalBlock = styled.div`
     padding-top: 20px;
+    @media (max-width: 768px) {
+        width: 380px;
+      }
 `;
 
 const AdditionalTitle = styled.button`
